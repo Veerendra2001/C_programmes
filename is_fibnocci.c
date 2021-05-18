@@ -1,27 +1,19 @@
 /* to find the given number in afibnocci */
 
 /* n=8 
-True
+TRUE
 n=10
-not true */
+FALSE */
 
 #include<stdio.h>
 int is_fib(int num)
 {
 	int a=0,b=1,c;
-	if(num==0)
+	while(c<num)
 	{
-		return 1;
-	}
-	while(1)
-	{
-		c=a+b;
-		if(c>=num)
-		{
-			break;
-		}
-		a=b;
-		b=c;
+	 c=a+b;
+	 a=b;
+	 b=c;
 	}
 	  return num==c;
 }
